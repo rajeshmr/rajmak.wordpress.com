@@ -2,7 +2,7 @@ import sys
 from Levenshtein import distance
 import json
 
-DISTANCE = 20
+DISTANCE = 25
 cluster = {}
 cid = 0
 
@@ -16,10 +16,6 @@ for i,line in enumerate(sys.stdin):
 		if distance(last[0],cols[0]) <= DISTANCE:
 			cluster[cid].append(cols)
 		else:
-			# print
-			# for c in cluster[cid]:
-			# 	# print "%s\t%s" % (cid,"\t".join(c))
-			# 	print c[1]
 			cid+=1
 			cluster[cid] = []
 			cluster[cid].append(cols)
