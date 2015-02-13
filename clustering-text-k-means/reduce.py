@@ -15,8 +15,6 @@ class KMeans:
         self.vectors = list()
         self.initial_vectors = list()
         self.clusters = list()
-        self.old_centroids = set()
-        self.centroids = set()
 
     def progress(self):
         self.iterations += 1
@@ -29,16 +27,9 @@ class KMeans:
         self.initial_vectors = random.sample(self.vectors, self.k)
         self.clusters = [Cluster(cid, vector) for cid, vector in enumerate(self.initial_vectors)]
 
-    def should_stop(self, _old_centroids, _centroids, _iterations):
-        if _iterations > self.max_iterations:
-            return False
-        return _old_centroids == _centroids
-
     def run(self):
-        while self.should_stop(self.old_centroids, self.centroids, self.iterations):
+        while self.iterations <= self.max_iterations:
             self.progress()
-            self.old_centroids = self.centroids
-            self.centroids.clear()
             for vector in self.vectors:
                 smallest_distance = 0
                 belongs_to = 0
@@ -50,17 +41,19 @@ class KMeans:
                     if distance < smallest_distance:
                         belongs_to = cid
                         smallest_distance = distance
-                self.centroids.add(self.clusters[belongs_to].add_vector_to_cluster(vector))
+                self.clusters[belongs_to].add_vector_to_cluster(vector)
         return self.clusters
 
 
 if __name__ == "__main__":
+    titles = open("sample_input.txt").readlines()
     kmeans = KMeans(20)
+
     for _vid, _vector_array in enumerate(sys.stdin):
         kmeans.add_vector(_vid, eval(_vector_array))
     kmeans.initialize()
-    for _cluster in kmeans.run():
-        print _cluster
-        print "-" * 10
 
-    print euclidean_distance([1, 2, 3], [1, 2, 3])
+    for _cluster in kmeans.run():
+        for v in _cluster.vectors:
+            print titles[v.vid].strip()
+        print "-" * 10
