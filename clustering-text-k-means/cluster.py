@@ -15,6 +15,7 @@ class Cluster:
         return "\n".join(out)
 
     def add_vector_to_cluster(self, _vector):
+        _vector.set_distance_from_centroid(self.centroid)
         self.vectors.add(_vector)
         return ",".join(map(str, self.calculate_centroid()))
 
