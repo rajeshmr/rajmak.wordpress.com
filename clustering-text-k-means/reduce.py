@@ -11,7 +11,7 @@ class KMeans:
     def __init__(self, k):
         self.k = k
         self.iterations = 0
-        self.max_iterations = 100
+        self.max_iterations = 1000
         self.vectors = list()
         self.initial_vectors = list()
         self.clusters = list()
@@ -25,7 +25,17 @@ class KMeans:
 
     def initialize(self):
         self.initial_vectors = random.sample(self.vectors, self.k)
-        self.clusters = [Cluster(cid, vector) for cid, vector in enumerate(self.initial_vectors)]
+        self.clusters = [Cluster(vector) for vector in self.initial_vectors]
+
+    def assign_vector_to_cluster(self, vector, belongs_to):
+        self.clusters[belongs_to].add_vector_to_cluster(vector)
+        for cid, cluster in enumerate(self.clusters):
+            if cid is belongs_to:
+                continue
+            try:
+                cluster.remove(vector)
+            except KeyError:
+                continue
 
     def run(self):
         while self.iterations <= self.max_iterations:
@@ -35,13 +45,10 @@ class KMeans:
                 belongs_to = 0
                 for cid, cluster in enumerate(self.clusters):
                     distance = euclidean_distance(vector.co_ords, cluster.centroid)
-                    if cid == 0:
+                    if cid == 0 or distance < smallest_distance:
                         smallest_distance = distance
                         belongs_to = cid
-                    if distance < smallest_distance:
-                        belongs_to = cid
-                        smallest_distance = distance
-                self.clusters[belongs_to].add_vector_to_cluster(vector)
+                self.assign_vector_to_cluster(vector, belongs_to)
         return self.clusters
 
 
@@ -55,5 +62,5 @@ if __name__ == "__main__":
 
     for _cluster in kmeans.run():
         for v in _cluster.vectors:
-            print titles[v.vid].strip()
+            print v.distance_from_centroid, titles[v.vid].strip()
         print "-" * 10

@@ -3,6 +3,7 @@ __author__ = 'raj'
 import sys
 from utils import *
 
+
 class Vector:
     def __init__(self, _vid, _vector):
         self.vid = _vid
@@ -14,3 +15,7 @@ class Vector:
 
     def __hash__(self):
         return self.vid
+
+    def __eq__(self, other):
+        return self.vid == other.vid
+

@@ -4,15 +4,17 @@ from utils import euclidean_distance
 
 
 class Cluster:
-    def __init__(self, _cid, _initial_vector):
-        self.cid = _cid
+    def __init__(self, _initial_vector):
         self.vectors = {_initial_vector}
         self.centroid = self.calculate_centroid()
 
     def __repr__(self):
-        out = ["cluster-id: %d vector-id %d: distance from centroid %f" % (
-            self.cid, v.vid, euclidean_distance(v.co_ords, self.centroid)) for v in self.vectors]
+        out = ["vector-id %d: distance from centroid %f" % (v.vid, euclidean_distance(v.co_ords, self.centroid)) for v
+               in self.vectors]
         return "\n".join(out)
+
+    def remove(self, vector):
+        self.vectors.remove(vector)
 
     def add_vector_to_cluster(self, _vector):
         _vector.set_distance_from_centroid(self.centroid)
