@@ -5,7 +5,7 @@ import re
 
 
 words = list()
-for word in open("bag_of_words.txt").readlines():
+for word in open("resources/bag_of_words.txt").readlines():
     words.append(word.strip())
 
 for title in sys.stdin:
