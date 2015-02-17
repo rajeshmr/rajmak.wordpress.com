@@ -1,7 +1,7 @@
 __author__ = 'raj'
 
 import sys
-from utils import *
+import numpy
 
 
 class Vector:
@@ -11,7 +11,10 @@ class Vector:
         self.distance_from_centroid = sys.maxint
 
     def set_distance_from_centroid(self, centroid):
-        self.distance_from_centroid = euclidean_distance(self.co_ords, centroid)
+        self.distance_from_centroid = numpy.linalg.norm(self.co_ords - centroid)
+
+    def get_distance_from_centroid(self, centroid):
+        return numpy.linalg.norm(self.co_ords - centroid)
 
     def __hash__(self):
         return self.vid

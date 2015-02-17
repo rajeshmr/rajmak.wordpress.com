@@ -1,15 +1,14 @@
 __author__ = 'raj'
-
-from utils import euclidean_distance
-
+import numpy
 
 class Cluster:
     def __init__(self, _initial_vector):
         self.vectors = {_initial_vector}
         self.centroid = self.calculate_centroid()
+        self.cid = self.centroid.__hash__()
 
     def __repr__(self):
-        out = ["vector-id %d: distance from centroid %f" % (v.vid, euclidean_distance(v.co_ords, self.centroid)) for v
+        out = ["%d\t%d\t%f" % (self.cid, v.vid, v.get_distance_from_centroid(self.centroid)) for v
                in self.vectors]
         return "\n".join(out)
 
@@ -26,5 +25,6 @@ class Cluster:
         return [sum(i) for i in zip(*_vectors)]
 
     def calculate_centroid(self):
-        self.centroid = [float(i) / len(self.vectors) for i in self.sum_of_vector_points()]
+        centroid = [float(i) / len(self.vectors) for i in self.sum_of_vector_points()]
+        self.centroid = numpy.array(centroid)
         return self.centroid
