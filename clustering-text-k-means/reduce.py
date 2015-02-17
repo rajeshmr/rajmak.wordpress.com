@@ -2,9 +2,7 @@ __author__ = 'raj'
 
 import sys
 import random
-
 import numpy
-
 from models.vector import Vector
 from models.cluster import Cluster
 
@@ -34,10 +32,7 @@ class KMeans:
         for cid, cluster in enumerate(self.clusters):
             if cid is belongs_to:
                 continue
-            try:
-                cluster.remove(vector)
-            except KeyError:
-                continue
+            cluster.remove(vector)
 
     def run(self):
         while self.iterations <= self.max_iterations:

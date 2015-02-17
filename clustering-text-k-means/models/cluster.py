@@ -1,6 +1,7 @@
 __author__ = 'raj'
 import numpy
 
+
 class Cluster:
     def __init__(self, _initial_vector):
         self.vectors = {_initial_vector}
@@ -13,7 +14,8 @@ class Cluster:
         return "\n".join(out)
 
     def remove(self, vector):
-        self.vectors.remove(vector)
+        if vector in self.vectors:
+            self.vectors.remove(vector)
 
     def add_vector_to_cluster(self, _vector):
         _vector.set_distance_from_centroid(self.centroid)
