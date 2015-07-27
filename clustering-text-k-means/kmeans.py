@@ -1,8 +1,4 @@
-__author__ = 'raj'
-
-import sys
 import random
-import numpy
 from models.vector import Vector
 from models.cluster import Cluster
 
@@ -84,22 +80,3 @@ class KMeans:
                         belongs_to = cid
                 self.assign_vector_to_cluster(vector, belongs_to)
         return self.clusters
-
-
-if __name__ == "__main__":
-    # program starts here
-    k = int(sys.argv[1])
-
-    max_iterations = int(sys.argv[2])
-    kmeans = KMeans(k, max_iterations)
-
-    # convert input to numpy_array and feed the vectors to KMeans instance
-    for _vid, _vector_array in enumerate(sys.stdin):
-        _vector_array = eval(_vector_array) # string to array
-        _vector_array = numpy.array(_vector_array) # array to numpy_array
-        kmeans.add_vector(_vid, _vector_array)
-    kmeans.initialize()
-
-    for _cluster in kmeans.run():
-        print _cluster
-        print
