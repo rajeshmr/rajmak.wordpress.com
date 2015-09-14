@@ -1,0 +1,23 @@
+{
+  "__type__":"GenericParser",
+  "name": "amazon.in",
+  "allowed_domains":[
+    "amazon.in"
+  ],
+  "sitemap_urls":[
+    "http://www.amazon.in/sitemaps.1946f6b8171de60.SitemapIndex_0.xml.gz"
+  ],
+  "sitemap_rules":{
+    "/recipe/":"parse_recipe"
+  },
+  "selectors":{
+    "title":{
+      "selector":"/html/body/div[@class='fluid-container mainContainer']/div[@class='row-fluid recipeDetail']/section[@class='recipeSummary']/h1/span/text()",
+      "type":"string"
+    },
+    "price":{
+      "selector":"//ul[@class='breadcrumb']//li",
+      "type":"string"
+    }
+  }
+}

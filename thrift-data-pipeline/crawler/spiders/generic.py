@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from scrapy.contrib.spiders import SitemapSpider
+from scrapy.spiders import SitemapSpider
 from scrapy.selector import Selector
 from crawler.models.product import ProductItem
 import json
