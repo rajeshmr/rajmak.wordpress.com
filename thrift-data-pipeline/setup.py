@@ -5,6 +5,7 @@ setup(
     version="0.1",
     packages=find_packages(),
     install_requires=[
-        "scrapy"
+        "scrapy",
+        "thrift==0.8.0"
     ]
 )
