@@ -15,3 +15,8 @@ service ParserService{
     void ping(),
     Product parse(1: HTML html)
 }
+
+service WriterService{
+    void ping(),
+    void write(1: Product product)
+}
