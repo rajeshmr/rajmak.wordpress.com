@@ -54,3 +54,4 @@ def get_thrift_client(host, port, service):
     client = service.Client(protocol)
     transport.open()
     client.ping()
+    return client

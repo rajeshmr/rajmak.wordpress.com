@@ -14,7 +14,7 @@ class ParserServiceHandler:
                 "title": "//div[@id='titleSection']/h1[@id='title']/span[@id='productTitle']/text()",
                 "price": "//div[@id='price']/table[@class='a-lineitem']/tbody/tr/td/span[@id='priceblock_saleprice']/text()"
             },
-            "flipkart.com": {
+            "www.flipkart.com": {
                 "title": "//div[@class='title-wrap line fk-font-family-museo section omniture-field']/h1/text()",
                 "price": "//div[@class='prices']/div/span[@class='selling-price omniture-field']/text()"
             }
@@ -34,7 +34,7 @@ class ParserServiceHandler:
         data = dict()
         selector = Selector(text=html.html)
         domain = urlparse(html.url).netloc
-        for key, xpath in self.parser_meta[domain]:
-            data[key] = selector.xpath(xpath)
+        for key, xpath in self.parser_meta[domain].iteritems():
+            data[key] = selector.xpath(xpath).extract()
         product = thrift_utils.get_model(data, Product)
         self.writer_client.write(product)

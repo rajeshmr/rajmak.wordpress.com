@@ -18,6 +18,6 @@ class ThriftClientPipeline(object):
             exit("Parser service not running!")
 
     def process_item(self, item, spider):
-        html = HTML(url=item['url'], html=item['html'])
+        html = HTML(url=item['url'], html=item['body'])
         self.client.parse(html)
         return html.url
