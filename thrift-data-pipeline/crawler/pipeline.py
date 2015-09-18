@@ -3,6 +3,7 @@ from thrift.transport import TSocket
 from thrift.transport import TTransport
 from thrift.protocol import TBinaryProtocol
 from models import ParserService
+from models.ttypes import HTML
 import pipeline_config
 
 
@@ -22,5 +23,6 @@ class ThriftClientPipeline(object):
             exit("Parser service not running!")
 
     def process_item(self, item, spider):
-        self.client.parse(item['body'])
-        return item['url']
+        html = HTML(url=item['url'], html=item['html'])
+        self.client.parse(html)
+        return html.url
