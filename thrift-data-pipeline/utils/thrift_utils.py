@@ -22,4 +22,6 @@ def get_model(data, thrift):
         else:
             pass
         result.append((tid, value))
+    result = sorted(result)
+    result = map(lambda x: x[1], result)
     return thrift(*result)
