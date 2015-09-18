@@ -21,10 +21,10 @@ class Iface:
   def ping(self, ):
     pass
 
-  def parse(self, body):
+  def parse(self, html):
     """
     Parameters:
-     - body
+     - html
     """
     pass
 
@@ -59,18 +59,18 @@ class Client(Iface):
     self._iprot.readMessageEnd()
     return
 
-  def parse(self, body):
+  def parse(self, html):
     """
     Parameters:
-     - body
+     - html
     """
-    self.send_parse(body)
+    self.send_parse(html)
     return self.recv_parse()
 
-  def send_parse(self, body):
+  def send_parse(self, html):
     self._oprot.writeMessageBegin('parse', TMessageType.CALL, self._seqid)
     args = parse_args()
-    args.body = body
+    args.html = html
     args.write(self._oprot)
     self._oprot.writeMessageEnd()
     self._oprot.trans.flush()
@@ -128,7 +128,7 @@ class Processor(Iface, TProcessor):
     args.read(iprot)
     iprot.readMessageEnd()
     result = parse_result()
-    result.success = self._handler.parse(args.body)
+    result.success = self._handler.parse(args.html)
     oprot.writeMessageBegin("parse", TMessageType.REPLY, seqid)
     result.write(oprot)
     oprot.writeMessageEnd()
@@ -224,16 +224,16 @@ class ping_result:
 class parse_args:
   """
   Attributes:
-   - body
+   - html
   """
 
   thrift_spec = (
     None, # 0
-    (1, TType.STRING, 'body', None, None, ), # 1
+    (1, TType.STRUCT, 'html', (HTML, HTML.thrift_spec), None, ), # 1
   )
 
-  def __init__(self, body=None,):
-    self.body = body
+  def __init__(self, html=None,):
+    self.html = html
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -245,8 +245,9 @@ class parse_args:
       if ftype == TType.STOP:
         break
       if fid == 1:
-        if ftype == TType.STRING:
-          self.body = iprot.readString();
+        if ftype == TType.STRUCT:
+          self.html = HTML()
+          self.html.read(iprot)
         else:
           iprot.skip(ftype)
       else:
@@ -259,9 +260,9 @@ class parse_args:
       oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
       return
     oprot.writeStructBegin('parse_args')
-    if self.body is not None:
-      oprot.writeFieldBegin('body', TType.STRING, 1)
-      oprot.writeString(self.body)
+    if self.html is not None:
+      oprot.writeFieldBegin('html', TType.STRUCT, 1)
+      self.html.write(oprot)
       oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()

@@ -24,7 +24,7 @@ if len(sys.argv) <= 1 or sys.argv[1] == '--help':
   print ''
   print 'Functions:'
   print '  void ping()'
-  print '  Product parse(string body)'
+  print '  Product parse(HTML html)'
   print ''
   sys.exit(0)
 
@@ -86,7 +86,7 @@ elif cmd == 'parse':
   if len(args) != 1:
     print 'parse requires 1 args'
     sys.exit(1)
-  pp.pprint(client.parse(args[0],))
+  pp.pprint(client.parse(eval(args[0]),))
 
 else:
   print 'Unrecognized method %s' % cmd
