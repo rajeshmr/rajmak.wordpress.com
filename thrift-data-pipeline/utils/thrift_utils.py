@@ -1,4 +1,8 @@
 from thrift.Thrift import TType
+from thrift.transport import TSocket
+from thrift.transport import TTransport
+from thrift.protocol import TBinaryProtocol
+from thrift.server import TServer
 
 
 def get_model(data, thrift):
@@ -25,3 +29,19 @@ def get_model(data, thrift):
     result = sorted(result)
     result = map(lambda x: x[1], result)
     return thrift(*result)
+
+
+def get_server(service, handler, port):
+    processor = service.Processor(handler)
+    transport = TSocket.TServerSocket(port=port)
+    transport_factory = TTransport.TBufferedTransportFactory()
+    protocol_factory = TBinaryProtocol.TBinaryProtocolFactory()
+    return TServer.TSimpleServer(processor, transport, transport_factory, protocol_factory)
+
+
+def get_async_server(service, handler, port):
+    processor = service.Processor(handler)
+    transport = TSocket.TServerSocket(port=port)
+    transport_factory = TTransport.TFramedTransport(transport)
+    protocol_factory = TBinaryProtocol.TBinaryProtocolFactory()
+    return TServer.TThreadedServer(processor, transport, transport_factory, protocol_factory)
