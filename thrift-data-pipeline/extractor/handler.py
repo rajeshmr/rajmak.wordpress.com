@@ -2,6 +2,9 @@ from models.ttypes import Product
 from scrapy.selector import Selector
 from urlparse import urlparse
 from utils import thrift_utils
+import pipeline_config
+from models import WriterService
+from thrift import Thrift
 
 
 class ParserServiceHandler:
@@ -16,6 +19,13 @@ class ParserServiceHandler:
                 "price": "//div[@class='prices']/div/span[@class='selling-price omniture-field']/text()"
             }
         }
+        try:
+            self.writer_client = thrift_utils.get_thrift_client(pipeline_config.WRITER_SERVICE_HOST,
+                                                                pipeline_config.WRITER_SERVICE_PORT,
+                                                                WriterService)
+        except Thrift.TException, tx:
+            print "%s" % tx.message
+            exit("Writer service not running!")
 
     def ping(self):
         print "ping"
@@ -26,4 +36,5 @@ class ParserServiceHandler:
         domain = urlparse(html.url).netloc
         for key, xpath in self.parser_meta[domain]:
             data[key] = selector.xpath(xpath)
-        return thrift_utils.get_model(data, Product)
+        product = thrift_utils.get_model(data, Product)
+        self.writer_client.write(product)

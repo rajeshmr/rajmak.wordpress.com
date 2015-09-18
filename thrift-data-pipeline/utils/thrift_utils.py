@@ -45,3 +45,12 @@ def get_async_server(service, handler, port):
     transport_factory = TTransport.TFramedTransport(transport)
     protocol_factory = TBinaryProtocol.TBinaryProtocolFactory()
     return TServer.TThreadedServer(processor, transport, transport_factory, protocol_factory)
+
+
+def get_thrift_client(host, port, service):
+    socket = TSocket.TSocket(host, port)
+    transport = TTransport.TBufferedTransport(socket)
+    protocol = TBinaryProtocol.TBinaryProtocol(transport)
+    client = service.Client(protocol)
+    transport.open()
+    client.ping()
