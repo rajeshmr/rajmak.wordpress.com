@@ -1,14 +1,9 @@
 __author__ = 'raj'
+from sklearn.feature_extraction.text import CountVectorizer
 import sys
-import re
 
-bag_of_words = set()
-for title in sys.stdin:
-    title = re.sub(r"[^a-zA-Z]", " ", title).lower()
-    for word in filter(lambda x: len(x) > 2, title.split()):
-        bag_of_words.add(word.strip())
+vectorizer = CountVectorizer(min_df=1)
 
-for word in bag_of_words:
-    print word
-
-
+with open(sys.argv[1]) as f:
+    corpus = [line.strip() for line in f]
+    vectorizer.fit_transform(corpus)
