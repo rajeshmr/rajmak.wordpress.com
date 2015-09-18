@@ -8,6 +8,6 @@ for line in sys.stdin:
     splits = line.strip().split("\t")
     if line.strip() == "":
         print
-    if len(splits) == 3:
-        print titles[int(splits[1])].strip()
+    if len(splits) == 4:
+        print titles[int(splits[2])].strip()
 

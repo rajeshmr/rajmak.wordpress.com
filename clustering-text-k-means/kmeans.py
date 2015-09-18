@@ -28,7 +28,6 @@ class KMeans:
     # increments iteration
     def progress(self):
         self.iterations += 1
-        print self.iterations
 
     # converts array from mapper to Vector object and adds it to KMeans class
     # vid : int,
@@ -44,7 +43,11 @@ class KMeans:
     # and Cluster objects are constructed
 
     def initialize(self):
-        self.initial_vectors = random.sample(self.vectors, self.k)
+        self.initial_vectors = []
+        if len(self.vectors) < self.k:
+            self.initial_vectors = random.sample(self.vectors, len(self.vectors) / 2)
+        else:
+            self.initial_vectors = random.sample(self.vectors, self.k)
         self.clusters = [Cluster(vector) for vector in self.initial_vectors]
 
     # given cluster index, adds a vector to that cluster and removes the
@@ -79,4 +82,4 @@ class KMeans:
                         smallest_distance = distance
                         belongs_to = cid
                 self.assign_vector_to_cluster(vector, belongs_to)
-        return self.clusters
+        yield self.clusters
