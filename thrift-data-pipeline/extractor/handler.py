@@ -17,7 +17,8 @@ class ParserServiceHandler:
             },
             "www.flipkart.com": {
                 "title": "//div[@class='title-wrap line fk-font-family-museo section omniture-field']/h1/text()",
-                "price": "//div[@class='prices']/div/span[@class='selling-price omniture-field']/text()"
+                "price": "//div[@class='prices']/div/span[@class='selling-price omniture-field']/text()",
+                "out_of_stock": "//div[@class='out-of-stock']/div[@class='out-of-stock-text']/div[@class='out-of-stock-status']/text()"
             }
         }
         try:
@@ -37,6 +38,9 @@ class ParserServiceHandler:
         selector = Selector(text=html.html)
         domain = urlparse(html.url).netloc
         for key, xpath in self.parser_meta[domain].iteritems():
-            data[key] = selector.xpath(xpath).extract()
+            extracted = selector.xpath(xpath).extract()
+            data[key] = extracted[0] if extracted else None
         product = thrift_utils.get_model(data, Product)
-        self.writer_client.write(product)
+        if product.title and product. price:
+            self.writer_client.write(product)
+        logging.info("Parsed: %s" % html.url)

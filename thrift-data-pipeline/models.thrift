@@ -3,7 +3,7 @@ namespace py models
 struct Product{
     1: string title,
     2: double price,
-    3: bool in_stock,
+    3: bool out_of_stock,
     4: string url
 }
 

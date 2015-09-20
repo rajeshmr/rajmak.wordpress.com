@@ -22,7 +22,7 @@ class Product:
   Attributes:
    - title
    - price
-   - in_stock
+   - out_of_stock
    - url
   """
 
@@ -30,14 +30,14 @@ class Product:
     None, # 0
     (1, TType.STRING, 'title', None, None, ), # 1
     (2, TType.DOUBLE, 'price', None, None, ), # 2
-    (3, TType.BOOL, 'in_stock', None, None, ), # 3
+    (3, TType.BOOL, 'out_of_stock', None, None, ), # 3
     (4, TType.STRING, 'url', None, None, ), # 4
   )
 
-  def __init__(self, title=None, price=None, in_stock=None, url=None,):
+  def __init__(self, title=None, price=None, out_of_stock=None, url=None,):
     self.title = title
     self.price = price
-    self.in_stock = in_stock
+    self.out_of_stock = out_of_stock
     self.url = url
 
   def read(self, iprot):
@@ -61,7 +61,7 @@ class Product:
           iprot.skip(ftype)
       elif fid == 3:
         if ftype == TType.BOOL:
-          self.in_stock = iprot.readBool();
+          self.out_of_stock = iprot.readBool();
         else:
           iprot.skip(ftype)
       elif fid == 4:
@@ -87,9 +87,9 @@ class Product:
       oprot.writeFieldBegin('price', TType.DOUBLE, 2)
       oprot.writeDouble(self.price)
       oprot.writeFieldEnd()
-    if self.in_stock is not None:
-      oprot.writeFieldBegin('in_stock', TType.BOOL, 3)
-      oprot.writeBool(self.in_stock)
+    if self.out_of_stock is not None:
+      oprot.writeFieldBegin('out_of_stock', TType.BOOL, 3)
+      oprot.writeBool(self.out_of_stock)
       oprot.writeFieldEnd()
     if self.url is not None:
       oprot.writeFieldBegin('url', TType.STRING, 4)
@@ -106,7 +106,7 @@ class Product:
     value = 17
     value = (value * 31) ^ hash(self.title)
     value = (value * 31) ^ hash(self.price)
-    value = (value * 31) ^ hash(self.in_stock)
+    value = (value * 31) ^ hash(self.out_of_stock)
     value = (value * 31) ^ hash(self.url)
     return value
 
