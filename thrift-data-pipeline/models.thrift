@@ -14,7 +14,7 @@ struct HTML{
 
 service ParserService{
     void ping(),
-    Product parse(1: HTML html)
+    void parse(1: HTML html)
 }
 
 service WriterService{
