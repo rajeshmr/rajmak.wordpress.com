@@ -23,6 +23,7 @@ class Product:
    - title
    - price
    - in_stock
+   - url
   """
 
   thrift_spec = (
@@ -30,12 +31,14 @@ class Product:
     (1, TType.STRING, 'title', None, None, ), # 1
     (2, TType.DOUBLE, 'price', None, None, ), # 2
     (3, TType.BOOL, 'in_stock', None, None, ), # 3
+    (4, TType.STRING, 'url', None, None, ), # 4
   )
 
-  def __init__(self, title=None, price=None, in_stock=None,):
+  def __init__(self, title=None, price=None, in_stock=None, url=None,):
     self.title = title
     self.price = price
     self.in_stock = in_stock
+    self.url = url
 
   def read(self, iprot):
     if iprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and isinstance(iprot.trans, TTransport.CReadableTransport) and self.thrift_spec is not None and fastbinary is not None:
@@ -61,6 +64,11 @@ class Product:
           self.in_stock = iprot.readBool();
         else:
           iprot.skip(ftype)
+      elif fid == 4:
+        if ftype == TType.STRING:
+          self.url = iprot.readString();
+        else:
+          iprot.skip(ftype)
       else:
         iprot.skip(ftype)
       iprot.readFieldEnd()
@@ -82,6 +90,10 @@ class Product:
     if self.in_stock is not None:
       oprot.writeFieldBegin('in_stock', TType.BOOL, 3)
       oprot.writeBool(self.in_stock)
+      oprot.writeFieldEnd()
+    if self.url is not None:
+      oprot.writeFieldBegin('url', TType.STRING, 4)
+      oprot.writeString(self.url)
       oprot.writeFieldEnd()
     oprot.writeFieldStop()
     oprot.writeStructEnd()

@@ -2,8 +2,9 @@ namespace py models
 
 struct Product{
     1: string title,
-    2: double price
-    3: bool in_stock
+    2: double price,
+    3: bool in_stock,
+    4: string url
 }
 
 struct HTML{
