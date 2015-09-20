@@ -11,5 +11,8 @@ if __name__ == '__main__':
     handler = WriterServiceHandler()
     server = thrift_utils.get_server(WriterService, handler, pipeline_config.WRITER_SERVICE_PORT)
     logging.info("Starting writer server")
-    server.serve()
-    logging.info("Terminating writer server")
+    try:
+        server.serve()
+    except Exception as e:
+        logging.error(e)
+        logging.info("Terminating writer server")
