@@ -33,6 +33,7 @@ class ParserServiceHandler:
 
     def parse(self, html):
         data = dict()
+        data["url"] = html.url
         selector = Selector(text=html.html)
         domain = urlparse(html.url).netloc
         for key, xpath in self.parser_meta[domain].iteritems():
