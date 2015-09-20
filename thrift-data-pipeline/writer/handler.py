@@ -1,6 +1,7 @@
 import sqlite3
 import pipeline_config
 import json
+import logging
 
 
 class WriterServiceHandler:
@@ -15,7 +16,7 @@ class WriterServiceHandler:
         self.json_file.close()
 
     def ping(self):
-        print "ping"
+        logging.info("ping")
 
     def sqlite_writer(self, product):
         sql = self.insert_query.format(title=product.title, price=product.price, in_stock=product.in_stock)

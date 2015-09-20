@@ -5,6 +5,7 @@ from utils import thrift_utils
 import pipeline_config
 from models import WriterService
 from thrift import Thrift
+import logging
 
 
 class ParserServiceHandler:
@@ -24,11 +25,11 @@ class ParserServiceHandler:
                                                                 pipeline_config.WRITER_SERVICE_PORT,
                                                                 WriterService)
         except Thrift.TException, tx:
-            print "%s" % tx.message
+            logging.error("%s" % tx.message)
             exit("Writer service not running!")
 
     def ping(self):
-        print "ping"
+        logging.info("ping")
 
     def parse(self, html):
         data = dict()
