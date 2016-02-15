@@ -1,0 +1,130 @@
+Boneless	NNP	XXX
+chicken	VBD	XXX
+600	CD	XXX
+grams	NNS	XXX
+
+Basmati	NNP	XXX
+rice	NN	XXX
+1	CD	XXX
+1/2	CD	XXX
+cups	NNS	XXX
+
+Oil	NN	XXX
+to	TO	XXX
+deep	VB	XXX
+fry3	NN	XXX
+tablespoons	NNS	XXX
+
+Cinnamon	NNP	XXX
+1	CD	XXX
+inch	NN	XXX
+stick	NN	XXX
+
+Bay	NNP	XXX
+leaves	VBZ	XXX
+2	CD	XXX
+
+Cloves	NNS	XXX
+5-6	JJ	XXX
+
+Cumin	NNP	XXX
+seeds	VBZ	XXX
+1	CD	XXX
+teaspoon	NN	XXX
+
+Green	JJ	XXX
+cardamoms	NNS	XXX
+3-4	JJ	XXX
+
+Onions	NNS	XXX
+sliced2	VBP	XXX
+medium	NN	XXX
+
+Green	JJ	XXX
+chillies	NNS	XXX
+slit3	VBP	XXX
+
+Turmeric	NNP	XXX
+powder	NN	XXX
+1/4	CD	XXX
+teaspoon	NN	XXX
+
+Tomatoes	NNP	XXX
+chopped2	VBD	XXX
+medium	NN	XXX
+
+Salt	NNP	XXX
+to	TO	XXX
+taste	VB	XXX
+
+Ginger	NNP	XXX
+paste	NN	XXX
+3/4	CD	XXX
+teaspoon	NN	XXX
+
+Garlic	NNP	XXX
+paste	NN	XXX
+3/4	CD	XXX
+teaspoon	NN	XXX
+
+Red	JJ	XXX
+chilli	NN	XXX
+powder	NN	XXX
+1/2	CD	XXX
+teaspoon	NN	XXX
+
+Thick	NNP	XXX
+yogurt	PRP	XXX
+1	CD	XXX
+cup	NN	XXX
+
+Onions	NNS	XXX
+sliced	VBD	XXX
+and	CC	XXX
+fried	VBD	XXX
+brown3	NN	XXX
+medium	NN	XXX
+
+Garam	NNP	XXX
+masala	NN	XXX
+powder	NN	XXX
+1/2	CD	XXX
+teaspoon	NN	XXX
+
+Ginger	NNP	XXX
+cut	VBD	XXX
+into	IN	XXX
+thin	JJ	XXX
+strips1	NN	XXX
+inch	NN	XXX
+piece	NN	XXX
+
+Fresh	JJ	XXX
+mint	NN	XXX
+leaves	VBZ	XXX
+torn	RP	XXX
+a	DT	XXX
+few	JJ	XXX
+
+Fresh	JJ	XXX
+coriander	NN	XXX
+leaves	VBZ	XXX
+torn	RP	XXX
+a	DT	XXX
+few	JJ	XXX
+
+Milk	NN	XXX
+1/2	CD	XXX
+cup	NN	XXX
+
+Rose	JJ	XXX
+water	NN	XXX
+a	DT	XXX
+few	JJ	XXX
+drops	NNS	XXX
+
+Eggs	NNP	XXX
+boiled	VBD	XXX
+and	CC	XXX
+sliced4	VB	XXX
+
