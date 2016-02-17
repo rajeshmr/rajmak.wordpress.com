@@ -1,0 +1,74 @@
+QTY	w[0]=7-8	w[1]=pakal	w[2]=fish	w[0]|w[1]=7-8|pakal	pos[0]=JJ	pos[1]=NN	pos[2]=NN	pos[0]|pos[1]=JJ|NN	pos[1]|pos[2]=NN|NN	pos[0]|pos[1]|pos[2]=JJ|NN|NN	__BOS__
+NAME	w[-1]=7-8	w[0]=pakal	w[1]=fish	w[-1]|w[0]=7-8|pakal	w[0]|w[1]=pakal|fish	pos[-1]=JJ	pos[0]=NN	pos[1]=NN	pos[-1]|pos[0]=JJ|NN	pos[0]|pos[1]=NN|NN	pos[-1]|pos[0]|pos[1]=JJ|NN|NN
+NAME	w[-2]=7-8	w[-1]=pakal	w[0]=fish	w[-1]|w[0]=pakal|fish	pos[-2]=JJ	pos[-1]=NN	pos[0]=NN	pos[-2]|pos[-1]=JJ|NN	pos[-1]|pos[0]=NN|NN	pos[-2]|pos[-1]|pos[0]=JJ|NN|NN	__EOS__
+
+QTY	w[0]=1	w[1]=teaspoon	w[2]=turmeric	w[0]|w[1]=1|teaspoon	pos[0]=CD	pos[1]=NN	pos[2]=JJ	pos[0]|pos[1]=CD|NN	pos[1]|pos[2]=NN|JJ	pos[0]|pos[1]|pos[2]=CD|NN|JJ	__BOS__
+UNIT	w[-1]=1	w[0]=teaspoon	w[1]=turmeric	w[2]=powder	w[-1]|w[0]=1|teaspoon	w[0]|w[1]=teaspoon|turmeric	pos[-1]=CD	pos[0]=NN	pos[1]=JJ	pos[2]=NN	pos[-1]|pos[0]=CD|NN	pos[0]|pos[1]=NN|JJ	pos[1]|pos[2]=JJ|NN	pos[-1]|pos[0]|pos[1]=CD|NN|JJ	pos[0]|pos[1]|pos[2]=NN|JJ|NN
+NAME	w[-2]=1	w[-1]=teaspoon	w[0]=turmeric	w[1]=powder	w[-1]|w[0]=teaspoon|turmeric	w[0]|w[1]=turmeric|powder	pos[-2]=CD	pos[-1]=NN	pos[0]=JJ	pos[1]=NN	pos[-2]|pos[-1]=CD|NN	pos[-1]|pos[0]=NN|JJ	pos[0]|pos[1]=JJ|NN	pos[-2]|pos[-1]|pos[0]=CD|NN|JJ	pos[-1]|pos[0]|pos[1]=NN|JJ|NN
+NAME	w[-2]=teaspoon	w[-1]=turmeric	w[0]=powder	w[-1]|w[0]=turmeric|powder	pos[-2]=NN	pos[-1]=JJ	pos[0]=NN	pos[-2]|pos[-1]=NN|JJ	pos[-1]|pos[0]=JJ|NN	pos[-2]|pos[-1]|pos[0]=NN|JJ|NN	__EOS__
+
+OTHER	w[0]=as	w[1]=needed	w[2]=salt	w[0]|w[1]=as|needed	pos[0]=IN	pos[1]=VBN	pos[2]=NN	pos[0]|pos[1]=IN|VBN	pos[1]|pos[2]=VBN|NN	pos[0]|pos[1]|pos[2]=IN|VBN|NN	__BOS__
+OTHER	w[-1]=as	w[0]=needed	w[1]=salt	w[-1]|w[0]=as|needed	w[0]|w[1]=needed|salt	pos[-1]=IN	pos[0]=VBN	pos[1]=NN	pos[-1]|pos[0]=IN|VBN	pos[0]|pos[1]=VBN|NN	pos[-1]|pos[0]|pos[1]=IN|VBN|NN
+NAME	w[-2]=as	w[-1]=needed	w[0]=salt	w[-1]|w[0]=needed|salt	pos[-2]=IN	pos[-1]=VBN	pos[0]=NN	pos[-2]|pos[-1]=IN|VBN	pos[-1]|pos[0]=VBN|NN	pos[-2]|pos[-1]|pos[0]=IN|VBN|NN	__EOS__
+
+QTY	w[0]=2	w[1]=tablespoon	w[2]=mustard	w[0]|w[1]=2|tablespoon	pos[0]=CD	pos[1]=NN	pos[2]=NN	pos[0]|pos[1]=CD|NN	pos[1]|pos[2]=NN|NN	pos[0]|pos[1]|pos[2]=CD|NN|NN	__BOS__
+UNIT	w[-1]=2	w[0]=tablespoon	w[1]=mustard	w[2]=oil	w[-1]|w[0]=2|tablespoon	w[0]|w[1]=tablespoon|mustard	pos[-1]=CD	pos[0]=NN	pos[1]=NN	pos[2]=NN	pos[-1]|pos[0]=CD|NN	pos[0]|pos[1]=NN|NN	pos[1]|pos[2]=NN|NN	pos[-1]|pos[0]|pos[1]=CD|NN|NN	pos[0]|pos[1]|pos[2]=NN|NN|NN
+NAME	w[-2]=2	w[-1]=tablespoon	w[0]=mustard	w[1]=oil	w[-1]|w[0]=tablespoon|mustard	w[0]|w[1]=mustard|oil	pos[-2]=CD	pos[-1]=NN	pos[0]=NN	pos[1]=NN	pos[-2]|pos[-1]=CD|NN	pos[-1]|pos[0]=NN|NN	pos[0]|pos[1]=NN|NN	pos[-2]|pos[-1]|pos[0]=CD|NN|NN	pos[-1]|pos[0]|pos[1]=NN|NN|NN
+NAME	w[-2]=tablespoon	w[-1]=mustard	w[0]=oil	w[-1]|w[0]=mustard|oil	pos[-2]=NN	pos[-1]=NN	pos[0]=NN	pos[-2]|pos[-1]=NN|NN	pos[-1]|pos[0]=NN|NN	pos[-2]|pos[-1]|pos[0]=NN|NN|NN	__EOS__
+
+OTHER	w[0]=a	w[1]=pinch	w[2]=black	w[0]|w[1]=a|pinch	pos[0]=DT	pos[1]=JJ	pos[2]=JJ	pos[0]|pos[1]=DT|JJ	pos[1]|pos[2]=JJ|JJ	pos[0]|pos[1]|pos[2]=DT|JJ|JJ	__BOS__
+UNIT	w[-1]=a	w[0]=pinch	w[1]=black	w[2]=cumin	w[-1]|w[0]=a|pinch	w[0]|w[1]=pinch|black	pos[-1]=DT	pos[0]=JJ	pos[1]=JJ	pos[2]=NN	pos[-1]|pos[0]=DT|JJ	pos[0]|pos[1]=JJ|JJ	pos[1]|pos[2]=JJ|NN	pos[-1]|pos[0]|pos[1]=DT|JJ|JJ	pos[0]|pos[1]|pos[2]=JJ|JJ|NN
+COM	w[-2]=a	w[-1]=pinch	w[0]=black	w[1]=cumin	w[2]=seeds/powder	w[-1]|w[0]=pinch|black	w[0]|w[1]=black|cumin	pos[-2]=DT	pos[-1]=JJ	pos[0]=JJ	pos[1]=NN	pos[2]=NN	pos[-2]|pos[-1]=DT|JJ	pos[-1]|pos[0]=JJ|JJ	pos[0]|pos[1]=JJ|NN	pos[1]|pos[2]=NN|NN	pos[-2]|pos[-1]|pos[0]=DT|JJ|JJ	pos[-1]|pos[0]|pos[1]=JJ|JJ|NN	pos[0]|pos[1]|pos[2]=JJ|NN|NN
+NAME	w[-2]=pinch	w[-1]=black	w[0]=cumin	w[1]=seeds/powder	w[-1]|w[0]=black|cumin	w[0]|w[1]=cumin|seeds/powder	pos[-2]=JJ	pos[-1]=JJ	pos[0]=NN	pos[1]=NN	pos[-2]|pos[-1]=JJ|JJ	pos[-1]|pos[0]=JJ|NN	pos[0]|pos[1]=NN|NN	pos[-2]|pos[-1]|pos[0]=JJ|JJ|NN	pos[-1]|pos[0]|pos[1]=JJ|NN|NN
+NAME	w[-2]=black	w[-1]=cumin	w[0]=seeds/powder	w[-1]|w[0]=cumin|seeds/powder	pos[-2]=JJ	pos[-1]=NN	pos[0]=NN	pos[-2]|pos[-1]=JJ|NN	pos[-1]|pos[0]=NN|NN	pos[-2]|pos[-1]|pos[0]=JJ|NN|NN	__EOS__
+
+QTY	w[0]=2	w[1]=tablespoon	w[2]=onion	w[0]|w[1]=2|tablespoon	pos[0]=CD	pos[1]=NN	pos[2]=NN	pos[0]|pos[1]=CD|NN	pos[1]|pos[2]=NN|NN	pos[0]|pos[1]|pos[2]=CD|NN|NN	__BOS__
+UNIT	w[-1]=2	w[0]=tablespoon	w[1]=onion	w[2]=,	w[-1]|w[0]=2|tablespoon	w[0]|w[1]=tablespoon|onion	pos[-1]=CD	pos[0]=NN	pos[1]=NN	pos[2]=,	pos[-1]|pos[0]=CD|NN	pos[0]|pos[1]=NN|NN	pos[1]|pos[2]=NN|,	pos[-1]|pos[0]|pos[1]=CD|NN|NN	pos[0]|pos[1]|pos[2]=NN|NN|,
+NAME	w[-2]=2	w[-1]=tablespoon	w[0]=onion	w[1]=,	w[2]=sliced	w[-1]|w[0]=tablespoon|onion	w[0]|w[1]=onion|,	pos[-2]=CD	pos[-1]=NN	pos[0]=NN	pos[1]=,	pos[2]=VBD	pos[-2]|pos[-1]=CD|NN	pos[-1]|pos[0]=NN|NN	pos[0]|pos[1]=NN|,	pos[1]|pos[2]=,|VBD	pos[-2]|pos[-1]|pos[0]=CD|NN|NN	pos[-1]|pos[0]|pos[1]=NN|NN|,	pos[0]|pos[1]|pos[2]=NN|,|VBD
+OTHER	w[-2]=tablespoon	w[-1]=onion	w[0]=,	w[1]=sliced	w[-1]|w[0]=onion|,	w[0]|w[1]=,|sliced	pos[-2]=NN	pos[-1]=NN	pos[0]=,	pos[1]=VBD	pos[-2]|pos[-1]=NN|NN	pos[-1]|pos[0]=NN|,	pos[0]|pos[1]=,|VBD	pos[-2]|pos[-1]|pos[0]=NN|NN|,	pos[-1]|pos[0]|pos[1]=NN|,|VBD
+COM	w[-2]=onion	w[-1]=,	w[0]=sliced	w[-1]|w[0]=,|sliced	pos[-2]=NN	pos[-1]=,	pos[0]=VBD	pos[-2]|pos[-1]=NN|,	pos[-1]|pos[0]=,|VBD	pos[-2]|pos[-1]|pos[0]=NN|,|VBD	__EOS__
+
+QTY	w[0]=1/2	w[1]=teaspoon	w[2]=ginger	w[0]|w[1]=1/2|teaspoon	pos[0]=CD	pos[1]=NN	pos[2]=NN	pos[0]|pos[1]=CD|NN	pos[1]|pos[2]=NN|NN	pos[0]|pos[1]|pos[2]=CD|NN|NN	__BOS__
+UNIT	w[-1]=1/2	w[0]=teaspoon	w[1]=ginger	w[2]=paste	w[-1]|w[0]=1/2|teaspoon	w[0]|w[1]=teaspoon|ginger	pos[-1]=CD	pos[0]=NN	pos[1]=NN	pos[2]=NN	pos[-1]|pos[0]=CD|NN	pos[0]|pos[1]=NN|NN	pos[1]|pos[2]=NN|NN	pos[-1]|pos[0]|pos[1]=CD|NN|NN	pos[0]|pos[1]|pos[2]=NN|NN|NN
+NAME	w[-2]=1/2	w[-1]=teaspoon	w[0]=ginger	w[1]=paste	w[-1]|w[0]=teaspoon|ginger	w[0]|w[1]=ginger|paste	pos[-2]=CD	pos[-1]=NN	pos[0]=NN	pos[1]=NN	pos[-2]|pos[-1]=CD|NN	pos[-1]|pos[0]=NN|NN	pos[0]|pos[1]=NN|NN	pos[-2]|pos[-1]|pos[0]=CD|NN|NN	pos[-1]|pos[0]|pos[1]=NN|NN|NN
+NAME	w[-2]=teaspoon	w[-1]=ginger	w[0]=paste	w[-1]|w[0]=ginger|paste	pos[-2]=NN	pos[-1]=NN	pos[0]=NN	pos[-2]|pos[-1]=NN|NN	pos[-1]|pos[0]=NN|NN	pos[-2]|pos[-1]|pos[0]=NN|NN|NN	__EOS__
+
+QTY	w[0]=1/2	w[1]=teaspoon	w[2]=garlic	w[0]|w[1]=1/2|teaspoon	pos[0]=CD	pos[1]=NN	pos[2]=JJ	pos[0]|pos[1]=CD|NN	pos[1]|pos[2]=NN|JJ	pos[0]|pos[1]|pos[2]=CD|NN|JJ	__BOS__
+UNIT	w[-1]=1/2	w[0]=teaspoon	w[1]=garlic	w[2]=paste	w[-1]|w[0]=1/2|teaspoon	w[0]|w[1]=teaspoon|garlic	pos[-1]=CD	pos[0]=NN	pos[1]=JJ	pos[2]=NN	pos[-1]|pos[0]=CD|NN	pos[0]|pos[1]=NN|JJ	pos[1]|pos[2]=JJ|NN	pos[-1]|pos[0]|pos[1]=CD|NN|JJ	pos[0]|pos[1]|pos[2]=NN|JJ|NN
+NAME	w[-2]=1/2	w[-1]=teaspoon	w[0]=garlic	w[1]=paste	w[-1]|w[0]=teaspoon|garlic	w[0]|w[1]=garlic|paste	pos[-2]=CD	pos[-1]=NN	pos[0]=JJ	pos[1]=NN	pos[-2]|pos[-1]=CD|NN	pos[-1]|pos[0]=NN|JJ	pos[0]|pos[1]=JJ|NN	pos[-2]|pos[-1]|pos[0]=CD|NN|JJ	pos[-1]|pos[0]|pos[1]=NN|JJ|NN
+NAME	w[-2]=teaspoon	w[-1]=garlic	w[0]=paste	w[-1]|w[0]=garlic|paste	pos[-2]=NN	pos[-1]=JJ	pos[0]=NN	pos[-2]|pos[-1]=NN|JJ	pos[-1]|pos[0]=JJ|NN	pos[-2]|pos[-1]|pos[0]=NN|JJ|NN	__EOS__
+
+QTY	w[0]=2-3	w[1]=green	w[2]=chilies	w[0]|w[1]=2-3|green	pos[0]=JJ	pos[1]=JJ	pos[2]=NNS	pos[0]|pos[1]=JJ|JJ	pos[1]|pos[2]=JJ|NNS	pos[0]|pos[1]|pos[2]=JJ|JJ|NNS	__BOS__
+COM	w[-1]=2-3	w[0]=green	w[1]=chilies	w[2]=,	w[-1]|w[0]=2-3|green	w[0]|w[1]=green|chilies	pos[-1]=JJ	pos[0]=JJ	pos[1]=NNS	pos[2]=,	pos[-1]|pos[0]=JJ|JJ	pos[0]|pos[1]=JJ|NNS	pos[1]|pos[2]=NNS|,	pos[-1]|pos[0]|pos[1]=JJ|JJ|NNS	pos[0]|pos[1]|pos[2]=JJ|NNS|,
+NAME	w[-2]=2-3	w[-1]=green	w[0]=chilies	w[1]=,	w[2]=chopped	w[-1]|w[0]=green|chilies	w[0]|w[1]=chilies|,	pos[-2]=JJ	pos[-1]=JJ	pos[0]=NNS	pos[1]=,	pos[2]=VBD	pos[-2]|pos[-1]=JJ|JJ	pos[-1]|pos[0]=JJ|NNS	pos[0]|pos[1]=NNS|,	pos[1]|pos[2]=,|VBD	pos[-2]|pos[-1]|pos[0]=JJ|JJ|NNS	pos[-1]|pos[0]|pos[1]=JJ|NNS|,	pos[0]|pos[1]|pos[2]=NNS|,|VBD
+OTHER	w[-2]=green	w[-1]=chilies	w[0]=,	w[1]=chopped	w[-1]|w[0]=chilies|,	w[0]|w[1]=,|chopped	pos[-2]=JJ	pos[-1]=NNS	pos[0]=,	pos[1]=VBD	pos[-2]|pos[-1]=JJ|NNS	pos[-1]|pos[0]=NNS|,	pos[0]|pos[1]=,|VBD	pos[-2]|pos[-1]|pos[0]=JJ|NNS|,	pos[-1]|pos[0]|pos[1]=NNS|,|VBD
+COM	w[-2]=chilies	w[-1]=,	w[0]=chopped	w[-1]|w[0]=,|chopped	pos[-2]=NNS	pos[-1]=,	pos[0]=VBD	pos[-2]|pos[-1]=NNS|,	pos[-1]|pos[0]=,|VBD	pos[-2]|pos[-1]|pos[0]=NNS|,|VBD	__EOS__
+
+QTY	w[0]=2	w[1]=tablespoon	w[2]=white	w[0]|w[1]=2|tablespoon	pos[0]=CD	pos[1]=NN	pos[2]=JJ	pos[0]|pos[1]=CD|NN	pos[1]|pos[2]=NN|JJ	pos[0]|pos[1]|pos[2]=CD|NN|JJ	__BOS__
+UNIT	w[-1]=2	w[0]=tablespoon	w[1]=white	w[2]=mustard	w[-1]|w[0]=2|tablespoon	w[0]|w[1]=tablespoon|white	pos[-1]=CD	pos[0]=NN	pos[1]=JJ	pos[2]=NN	pos[-1]|pos[0]=CD|NN	pos[0]|pos[1]=NN|JJ	pos[1]|pos[2]=JJ|NN	pos[-1]|pos[0]|pos[1]=CD|NN|JJ	pos[0]|pos[1]|pos[2]=NN|JJ|NN
+COM	w[-2]=2	w[-1]=tablespoon	w[0]=white	w[1]=mustard	w[2]=paste	w[-1]|w[0]=tablespoon|white	w[0]|w[1]=white|mustard	pos[-2]=CD	pos[-1]=NN	pos[0]=JJ	pos[1]=NN	pos[2]=NN	pos[-2]|pos[-1]=CD|NN	pos[-1]|pos[0]=NN|JJ	pos[0]|pos[1]=JJ|NN	pos[1]|pos[2]=NN|NN	pos[-2]|pos[-1]|pos[0]=CD|NN|JJ	pos[-1]|pos[0]|pos[1]=NN|JJ|NN	pos[0]|pos[1]|pos[2]=JJ|NN|NN
+NAME	w[-2]=tablespoon	w[-1]=white	w[0]=mustard	w[1]=paste	w[-1]|w[0]=white|mustard	w[0]|w[1]=mustard|paste	pos[-2]=NN	pos[-1]=JJ	pos[0]=NN	pos[1]=NN	pos[-2]|pos[-1]=NN|JJ	pos[-1]|pos[0]=JJ|NN	pos[0]|pos[1]=NN|NN	pos[-2]|pos[-1]|pos[0]=NN|JJ|NN	pos[-1]|pos[0]|pos[1]=JJ|NN|NN
+NAME	w[-2]=white	w[-1]=mustard	w[0]=paste	w[-1]|w[0]=mustard|paste	pos[-2]=JJ	pos[-1]=NN	pos[0]=NN	pos[-2]|pos[-1]=JJ|NN	pos[-1]|pos[0]=NN|NN	pos[-2]|pos[-1]|pos[0]=JJ|NN|NN	__EOS__
+
+NAME	w[0]=water	w[1]=as	w[2]=needed	w[0]|w[1]=water|as	pos[0]=NN	pos[1]=IN	pos[2]=VBN	pos[0]|pos[1]=NN|IN	pos[1]|pos[2]=IN|VBN	pos[0]|pos[1]|pos[2]=NN|IN|VBN	__BOS__
+OTHER	w[-1]=water	w[0]=as	w[1]=needed	w[-1]|w[0]=water|as	w[0]|w[1]=as|needed	pos[-1]=NN	pos[0]=IN	pos[1]=VBN	pos[-1]|pos[0]=NN|IN	pos[0]|pos[1]=IN|VBN	pos[-1]|pos[0]|pos[1]=NN|IN|VBN
+OTHER	w[-2]=water	w[-1]=as	w[0]=needed	w[-1]|w[0]=as|needed	pos[-2]=NN	pos[-1]=IN	pos[0]=VBN	pos[-2]|pos[-1]=NN|IN	pos[-1]|pos[0]=IN|VBN	pos[-2]|pos[-1]|pos[0]=NN|IN|VBN	__EOS__
+
+OTHER	w[0]=as	w[1]=needed	w[2]=sugar	w[0]|w[1]=as|needed	pos[0]=IN	pos[1]=VBN	pos[2]=NN	pos[0]|pos[1]=IN|VBN	pos[1]|pos[2]=VBN|NN	pos[0]|pos[1]|pos[2]=IN|VBN|NN	__BOS__
+OTHER	w[-1]=as	w[0]=needed	w[1]=sugar	w[-1]|w[0]=as|needed	w[0]|w[1]=needed|sugar	pos[-1]=IN	pos[0]=VBN	pos[1]=NN	pos[-1]|pos[0]=IN|VBN	pos[0]|pos[1]=VBN|NN	pos[-1]|pos[0]|pos[1]=IN|VBN|NN
+NAME	w[-2]=as	w[-1]=needed	w[0]=sugar	w[-1]|w[0]=needed|sugar	pos[-2]=IN	pos[-1]=VBN	pos[0]=NN	pos[-2]|pos[-1]=IN|VBN	pos[-1]|pos[0]=VBN|NN	pos[-2]|pos[-1]|pos[0]=IN|VBN|NN	__EOS__
+
+QTY	w[0]=1	w[1]=tablespoon	w[2]=coriander	w[0]|w[1]=1|tablespoon	pos[0]=CD	pos[1]=NN	pos[2]=NN	pos[0]|pos[1]=CD|NN	pos[1]|pos[2]=NN|NN	pos[0]|pos[1]|pos[2]=CD|NN|NN	__BOS__
+UNIT	w[-1]=1	w[0]=tablespoon	w[1]=coriander	w[2]=leaves	w[-1]|w[0]=1|tablespoon	w[0]|w[1]=tablespoon|coriander	pos[-1]=CD	pos[0]=NN	pos[1]=NN	pos[2]=VBZ	pos[-1]|pos[0]=CD|NN	pos[0]|pos[1]=NN|NN	pos[1]|pos[2]=NN|VBZ	pos[-1]|pos[0]|pos[1]=CD|NN|NN	pos[0]|pos[1]|pos[2]=NN|NN|VBZ
+NAME	w[-2]=1	w[-1]=tablespoon	w[0]=coriander	w[1]=leaves	w[2]=,	w[-1]|w[0]=tablespoon|coriander	w[0]|w[1]=coriander|leaves	pos[-2]=CD	pos[-1]=NN	pos[0]=NN	pos[1]=VBZ	pos[2]=,	pos[-2]|pos[-1]=CD|NN	pos[-1]|pos[0]=NN|NN	pos[0]|pos[1]=NN|VBZ	pos[1]|pos[2]=VBZ|,	pos[-2]|pos[-1]|pos[0]=CD|NN|NN	pos[-1]|pos[0]|pos[1]=NN|NN|VBZ	pos[0]|pos[1]|pos[2]=NN|VBZ|,
+NAME	w[-2]=tablespoon	w[-1]=coriander	w[0]=leaves	w[1]=,	w[2]=chopped	w[-1]|w[0]=coriander|leaves	w[0]|w[1]=leaves|,	pos[-2]=NN	pos[-1]=NN	pos[0]=VBZ	pos[1]=,	pos[2]=VBD	pos[-2]|pos[-1]=NN|NN	pos[-1]|pos[0]=NN|VBZ	pos[0]|pos[1]=VBZ|,	pos[1]|pos[2]=,|VBD	pos[-2]|pos[-1]|pos[0]=NN|NN|VBZ	pos[-1]|pos[0]|pos[1]=NN|VBZ|,	pos[0]|pos[1]|pos[2]=VBZ|,|VBD
+OTHER	w[-2]=coriander	w[-1]=leaves	w[0]=,	w[1]=chopped	w[-1]|w[0]=leaves|,	w[0]|w[1]=,|chopped	pos[-2]=NN	pos[-1]=VBZ	pos[0]=,	pos[1]=VBD	pos[-2]|pos[-1]=NN|VBZ	pos[-1]|pos[0]=VBZ|,	pos[0]|pos[1]=,|VBD	pos[-2]|pos[-1]|pos[0]=NN|VBZ|,	pos[-1]|pos[0]|pos[1]=VBZ|,|VBD
+COM	w[-2]=leaves	w[-1]=,	w[0]=chopped	w[-1]|w[0]=,|chopped	pos[-2]=VBZ	pos[-1]=,	pos[0]=VBD	pos[-2]|pos[-1]=VBZ|,	pos[-1]|pos[0]=,|VBD	pos[-2]|pos[-1]|pos[0]=VBZ|,|VBD	__EOS__
+
+QTY	w[0]=3-4	w[1]=green	w[2]=chilies	w[0]|w[1]=3-4|green	pos[0]=JJ	pos[1]=JJ	pos[2]=NNS	pos[0]|pos[1]=JJ|JJ	pos[1]|pos[2]=JJ|NNS	pos[0]|pos[1]|pos[2]=JJ|JJ|NNS	__BOS__
+COM	w[-1]=3-4	w[0]=green	w[1]=chilies	w[2]=,	w[-1]|w[0]=3-4|green	w[0]|w[1]=green|chilies	pos[-1]=JJ	pos[0]=JJ	pos[1]=NNS	pos[2]=,	pos[-1]|pos[0]=JJ|JJ	pos[0]|pos[1]=JJ|NNS	pos[1]|pos[2]=NNS|,	pos[-1]|pos[0]|pos[1]=JJ|JJ|NNS	pos[0]|pos[1]|pos[2]=JJ|NNS|,
+NAME	w[-2]=3-4	w[-1]=green	w[0]=chilies	w[1]=,	w[2]=whole	w[-1]|w[0]=green|chilies	w[0]|w[1]=chilies|,	pos[-2]=JJ	pos[-1]=JJ	pos[0]=NNS	pos[1]=,	pos[2]=JJ	pos[-2]|pos[-1]=JJ|JJ	pos[-1]|pos[0]=JJ|NNS	pos[0]|pos[1]=NNS|,	pos[1]|pos[2]=,|JJ	pos[-2]|pos[-1]|pos[0]=JJ|JJ|NNS	pos[-1]|pos[0]|pos[1]=JJ|NNS|,	pos[0]|pos[1]|pos[2]=NNS|,|JJ
+OTHER	w[-2]=green	w[-1]=chilies	w[0]=,	w[1]=whole	w[-1]|w[0]=chilies|,	w[0]|w[1]=,|whole	pos[-2]=JJ	pos[-1]=NNS	pos[0]=,	pos[1]=JJ	pos[-2]|pos[-1]=JJ|NNS	pos[-1]|pos[0]=NNS|,	pos[0]|pos[1]=,|JJ	pos[-2]|pos[-1]|pos[0]=JJ|NNS|,	pos[-1]|pos[0]|pos[1]=NNS|,|JJ
+NAME	w[-2]=chilies	w[-1]=,	w[0]=whole	w[-1]|w[0]=,|whole	pos[-2]=NNS	pos[-1]=,	pos[0]=JJ	pos[-2]|pos[-1]=NNS|,	pos[-1]|pos[0]=,|JJ	pos[-2]|pos[-1]|pos[0]=NNS|,|JJ	__EOS__
+
+

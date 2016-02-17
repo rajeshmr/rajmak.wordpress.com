@@ -1,0 +1,2 @@
+{"url": "http://allrecipes.co.in/recipe/12227/pakal-fish-curry.aspx", "ingredients": ["7-8 pakal fish", "1 teaspoon turmeric powder", "as needed salt", "2 tablespoon mustard oil", "a pinch black cumin seeds/powder", "2 tablespoon onion, sliced", "1/2 teaspoon ginger paste", "1/2 teaspoon garlic paste", "2-3 green chilies, chopped", "2 tablespoon white mustard paste", "water as needed", "as needed sugar", "1 tablespoon coriander leaves, chopped", "3-4 green chilies, whole"]}
+

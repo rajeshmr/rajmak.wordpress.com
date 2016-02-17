@@ -1,0 +1,74 @@
+7-8	JJ	QTY
+pakal	NN	NAME
+fish	NN	NAME
+
+1	CD	QTY
+teaspoon	NN	UNIT
+turmeric	JJ	NAME
+powder	NN	NAME
+
+as	IN	OTHER
+needed	VBN	OTHER
+salt	NN	NAME
+
+2	CD	QTY
+tablespoon	NN	UNIT
+mustard	NN	NAME
+oil	NN	NAME
+
+a	DT	OTHER
+pinch	JJ	UNIT
+black	JJ	COM
+cumin	NN	NAME
+seeds/powder	NN	NAME
+
+2	CD	QTY
+tablespoon	NN	UNIT
+onion	NN	NAME
+,	,	OTHER
+sliced	VBD	COM
+
+1/2	CD	QTY
+teaspoon	NN	UNIT
+ginger	NN	NAME
+paste	NN	NAME
+
+1/2	CD	QTY
+teaspoon	NN	UNIT
+garlic	JJ	NAME
+paste	NN	NAME
+
+2-3	JJ	QTY
+green	JJ	COM
+chilies	NNS	NAME
+,	,	OTHER
+chopped	VBD	COM
+
+2	CD	QTY
+tablespoon	NN	UNIT
+white	JJ	COM
+mustard	NN	NAME
+paste	NN	NAME
+
+water	NN	NAME
+as	IN	OTHER
+needed	VBN	OTHER
+
+as	IN	OTHER
+needed	VBN	OTHER
+sugar	NN	NAME
+
+1	CD	QTY
+tablespoon	NN	UNIT
+coriander	NN	NAME
+leaves	VBZ	NAME
+,	,	OTHER
+chopped	VBD	COM
+
+3-4	JJ	QTY
+green	JJ	COM
+chilies	NNS	NAME
+,	,	OTHER
+whole	JJ	NAME
+
+
